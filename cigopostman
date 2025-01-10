@@ -1,0 +1,161 @@
+{
+    "info": {
+        "_postman_id": "136a1c18-b597-4589-9549-b812eda70132",
+        "name": "Public API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+        "_exporter_id": "19094995"
+    },
+    "item": [
+        {
+            "name": "jobs",
+            "item": [
+                {
+                    "name": "id/{job ID}",
+                    "item": [
+                        {
+                            "name": "actions",
+                            "item": [
+                                {
+                                    "name": "{action ID}",
+                                    "item": [
+                                        {
+                                            "name": "Retrieve an Action for a Job",
+                                            "request": {
+                                                "method": "GET",
+                                                "header": [],
+                                                "url": "https://{{envURL}}/api/v1/jobs/id/{{apiJobID}}/actions/{{apiJobActionID}}"
+                                            },
+                                            "response": []
+                                        },
+                                        {
+                                            "name": "Delete an Action for a Job",
+                                            "request": {
+                                                "method": "DELETE",
+                                                "header": [],
+                                                "url": "https://{{envURL}}/api/v1jobs/id/{{apiJobID}}/actions/{{apiJobActionID}}"
+                                            },
+                                            "response": []
+                                        },
+                                        {
+                                            "name": "Update Job Action CT3949",
+                                            "request": {
+                                                "method": "PATCH",
+                                                "header": [],
+                                                "body": {
+                                                    "mode": "raw",
+                                                    "raw": "{\r\n    \"piece_count\": 2,\r\n    \"quantity\": 2,\r\n    \"description\": \"new testing flow\"\r\n}",
+                                                    "options": {
+                                                        "raw": {
+                                                            "language": "json"
+                                                        }
+                                                    }
+                                                },
+                                                "url": "https://{{envURL}}/api/v1/jobs/id/{{apiJobID}}/actions/{{apiJobActionID}}"
+                                            },
+                                            "response": []
+                                        },
+                                        {
+                                            "name": "Update Job action m2",
+                                            "request": {
+                                                "method": "PATCH",
+                                                "header": [],
+                                                "body": {
+                                                    "mode": "raw",
+                                                    "raw": "{\r\n    \"piece_count\": 2,\r\n    \"quantity\": 2,\r\n    \"description\": \"new testing flow\",\r\n    \"stop_location\": {\r\n        \"name\": \"Château Frontenac\",\r\n        \"geolocation\": {\r\n            \"address\": \"1 Rue des Carrières, Québec, QC G1R 4P5, Canadá\"\r\n        }\r\n    }\r\n}",
+                                                    "options": {
+                                                        "raw": {
+                                                            "language": "json"
+                                                        }
+                                                    }
+                                                },
+                                                "url": "https://{{envURL}}/api/v1/jobs/id/{{apiJobID}}/actions/{{apiJobActionID}}"
+                                            },
+                                            "response": []
+                                        },
+                                        {
+                                            "name": "Update a Job Action",
+                                            "request": {
+                                                "method": "PATCH",
+                                                "header": [],
+                                                "body": {
+                                                    "mode": "raw",
+                                                    "raw": "{\r\n    \"piece_count\": 2,\r\n    \"quantity\": 2,\r\n    \"description\": \"new testing flow\",\r\n    \"stop_location\": {\r\n        \"name\": \"Château Frontenac\",\r\n        \"geolocation\": {\r\n            \"address\": \"1 Rue des Carrières, Québec, QC G1R 4P5, Canadá\"\r\n        }\r\n    }\r\n}",
+                                                    "options": {
+                                                        "raw": {
+                                                            "language": "json"
+                                                        }
+                                                    }
+                                                },
+                                                "url": "https://{{envURL}}/api/v1/jobs/id/{{apiJobID}}/actions/{{apiJobActionID}}"
+                                            },
+                                            "response": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Retrieve all Actions for a Job",
+                                    "request": {
+                                        "method": "GET",
+                                        "header": [],
+                                        "url": "https://{{envURL}}/api/v1/jobs/id/{{apiJobID}}/actions"
+                                    },
+                                    "response": []
+                                },
+                                {
+                                    "name": "Create a new Job Action",
+                                    "request": {
+                                        "method": "POST",
+                                        "header": [],
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\r\n    \"id\": \"NC859\",\r\n    \"type\": \"delivery\",\r\n    \"description\": \"testing\",\r\n    \"handle_time\": 0,\r\n    \"quantity\": 1,\r\n    \"stop_location\": {\r\n        \"name\": \"corita\",\r\n        \"geolocation\": {\r\n            \"address\": \"52 Rue du Petit Champlain, Québec, QC G1K 4H4, Canadá\"\r\n        },\r\n        \"time_frame\": {\r\n            \"start\": \"5:23 PM\",\r\n            \"end\": \"6:45 PM\"\r\n        }\r\n    }\r\n}",
+                                            "options": {
+                                                "raw": {
+                                                    "language": "json"
+                                                }
+                                            }
+                                        },
+                                        "url": "https://{{envURL}}/api/v1/jobs/id/{{apiJobID}}/actions"
+                                    },
+                                    "response": []
+                                },
+                                {
+                                    "name": "Job Action CT3949",
+                                    "request": {
+                                        "method": "POST",
+                                        "header": [],
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\r\n    \"id\": \"GUS-JJT-DC2\",\r\n    \"type\": \"delivery\",\r\n    \"description\": \"Gustavian ~  ~~ Bedside Cabinet\",\r\n    \"value\": 100.2,\r\n    \"unit_weight\": \"\",\r\n    \"unit_volume\": 0.17,\r\n    \"piece_count\": 1,\r\n    \"piece_count_unit\": \"\",\r\n    \"quantity\": 2,\r\n    \"quantity_unit\": \"\",\r\n    \"handle_time\": 5,\r\n    \"stop_location_id\": \"\",\r\n    \"invoice_number\": \"89789789345\",\r\n    \"shipping_barcode\": \"00937\",\r\n    \"external_reference_id\": \"\"\r\n}",
+                                            "options": {
+                                                "raw": {
+                                                    "language": "json"
+                                                }
+                                            }
+                                        },
+                                        "url": "https://{{envURL}}/api/v1/jobs/id/{{apiJobID}}/actions"
+                                    },
+                                    "response": []
+                                },
+                                {
+                                    "name": "Delete all Actions for a Job",
+                                    "request": {
+                                        "method": "DELETE",
+                                        "header": [],
+                                        "url": "https://{{envURL}}/api/v1/jobs/id/{{apiJobID}}/actions"
+                                    },
+                                    "response": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Retrieve a Job",
+                            "request": {
+                                "method": "GET",
+                                "header": [],
+                                "url": "https://{{envURL}}/api/v1/jobs/id/{{apiJobID}}"
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "R...
